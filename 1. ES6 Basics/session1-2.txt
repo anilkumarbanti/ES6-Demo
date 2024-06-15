@@ -1,0 +1,110 @@
+
+Installation of node 
+
+1. Get the nodejs from below url
+https://nodejs.org/en/download/prebuilt-installer
+
+2. verify with following
+node -v
+
+3. install visual studio code
+
+4. create workspace
+eg:
+D:\mrv-react-batch\workspace
+
+
+_____________________________________________________________________________________________________________
+
+javascript
+
+  client  --req--->front end-----> business logic (backend)(backend tech+database)
+
+                                         client < =====res      <  ======   front    <=======
+
+tradatonal JS
+front end --------------> html + css
+                                  javascript(client script)
+
+modern JS(ES6)
+front end-----> javascript framework(React,Angular,Vue.js,Next.js)
+back end ---------> framework (Nodejs and Express JS)
+
+mobile----------> React Native (android and ios) cross platform application
+
+Technical stacks
+MERN, MEAN,
+
+Tradational way of writing 
+<html>
+
+<button onSubmit=validate()>sign up</button>
+
+<body>
+<script>
+
+function validate()
+{
+
+
+}
+
+</script>
+
+</html>
+
+modern way of writing
+
+sample.js
+console.log("hello");
+
+node sample.js
+hello
+_____________________________________________________________________________________________________________________________________
+
+let
+
+let declares re-assignable, block-scoped local variables , optionally intializing each to a value
+
+syntax
+
+let varname;
+let varname=value;
+let varname1=value, varname2=value;
+let varname1,varname2=value;
+
+Note:
+generally we can define any variables in js with var,let,const,class
+
+let,const,class ----> block scope
+var---------------------> non block scope
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

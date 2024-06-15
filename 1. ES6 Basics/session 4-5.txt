@@ -1,0 +1,66 @@
+Spread 
+Rest
+Destructuring 
+class
+
+spread---> (...), and it allows an iterable , such as array or 
+            string to be expanded in places where 0 or more args
+           
+	   spread syntax looks exactly like rest but here this expands an array 
+           into elements
+
+spread --------------> expanding 
+rest ---------------> single element
+
+spread syntax
+varable_name=[...value];
+
+
+destructuring
+
+break down a complex structure into simple parts
+
+array  destructuring
+object dstructuring
+
+
+let arraySample=["hey","killer"];
+let[str1,str2]=arraySample ;
+
+const objNum={
+    num5:100,
+    num6:99
+}
+
+const {a,b}=objNum;
+console.log(a,b)
+
+
+
+
+
+
+
+
+
+
+let colors=["blue","black"];
+let newColors= [...colors,"green","orange"]
+
+Rest:
+
+A function definition last parameter can be prefixed with ...
+
+syntax:
+function f(a,b,...theArgs)
+{
+//...
+}
+
+A function definition can have only one rest parameter 
+
+
+
+
+
+

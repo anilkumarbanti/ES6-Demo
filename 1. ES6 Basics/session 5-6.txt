@@ -1,0 +1,219 @@
+Date: 07/06/2024
+Assignment: inheritance(extends)
+class B
+{
+sayHello()
+{
+console.log("hello");
+}
+}
+class A extends B
+{
+
+sayBye()
+{
+console.log("Bye from B");
+sayHello();
+}
+
+class
+module
+
+class
+
+classes are a template for creating object
+
+classes encapsulate data with the code to work on that data
+
+to create a class we are gonna use 'class' keyword
+
+class can be define in two ways
+---------> class declaration
+class classname
+{
+//constructor
+//methods
+//.....
+
+}
+
+---------> class expression
+
+const classname=class 
+{
+//constructor
+//methods
+//.....
+
+};
+
+
+class Greeting
+{
+    sayHello(name)
+    {
+        return `Hello, ${name}`;
+    }
+
+    sayGoodbye(name)
+    {
+        return `Goodbye, ${name}`;
+    }
+
+    execute()
+    {
+        const MsgOne=this.sayHello('Sachin');
+        const MsgTwo=this.sayGoodbye('Sachin');
+        console.log(MsgOne);
+        console.log(MsgTwo);
+    }
+}
+
+//creating an instance 
+
+const greet=new Greeting();
+greet.execute();
+----------------------------------------------------------
+
+constructor
+
+class GreetingConstructor
+{
+    //constructor()
+    //{
+       // console.log("default constructor")
+    //}
+
+    constructor(name)
+    {
+        this.name=name;
+    }
+    sayHello()
+    {
+        return `Hello, ${this.name}`;
+    }
+    sayGoodbye()
+    {
+        return `Goodbye, ${this.name}`;
+    }
+
+    
+    execute()
+    {
+        const MsgOne=this.sayHello();
+        const MsgTwo=this.sayGoodbye();
+        console.log(MsgOne);
+        console.log(MsgTwo);
+    }
+
+}
+
+//creating an instance 
+
+//const greet=new GreetingConstructor();
+const greet1=new GreetingConstructor('Sachin');
+//greet.execute();
+greet1.execute();
+
+Note:
+constructor is defined by using constructor keyword
+only one constructor is allowed to define in a class
+this keyword is used to refer current class object/member
+to invoke a constructor we need to use new keyword with the class name()
+static var/method scope belongs to class. whenever there is context of 
+utiliy we need to go for static
+
+
+How to call multiple constructors in class?
+
+you can't have multiple constructors in a single class, 
+however , we need to use some conditional logic or using default parameter
+to achive simillar functionality
+
+
+
+class GreetingMultipleConstructors
+{
+    //constructor with default paramter
+    static dis='hello';
+    constructor(name,age){
+
+        if(typeof name==='undefined')
+            {
+                //Default constructor logic
+                console.log("if block")
+                this.name='Guest';
+                this.age=0;
+            }
+        else if(typeof age==='undefined')
+            {
+                console.log("else if block")
+                 //single parameter logic
+                 this.name='Guest';
+                 this.age=0;
+            }
+        else
+        {
+            //full parmeter logic
+            console.log("else block")
+            this.name=name;
+            this.age=age;
+        }
+
+    }
+
+    sayHello()
+    {
+        return `Hello, ${this.name} your age ${this.age}`;
+    }
+    sayGoodbye()
+    {
+        return `Goodbye, ${this.name} your age ${this.age}`;
+    }
+
+    
+    execute()
+    {
+        const MsgOne=this.sayHello();
+        const MsgTwo=this.sayGoodbye();
+        console.log(MsgOne);
+        console.log(MsgTwo);
+    }
+}
+
+const defaultGreet= new GreetingMultipleConstructors();
+defaultGreet.execute();
+console.log("coming from static",GreetingMultipleConstructors.dis);
+
+const singleGreet= new GreetingMultipleConstructors('sachin');
+singleGreet.execute();
+
+
+const fullGreet= new GreetingMultipleConstructors('sachin',20);
+fullGreet.execute();
+
+__________________________________________________________
+
+Modules:
+
+Modules are nothing but files containing javascript code 
+Each module us executed in strict mode 
+Variables, functions and classes declared in a module are not visible
+outside the module unless it is explicity exported
+
+Features:
+Encapsulation
+Reusability
+Dependency management
+
+
+exprot---->keyword
+import----> keyword
+
+
+
+
+
+
+
+

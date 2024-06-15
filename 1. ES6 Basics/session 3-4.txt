@@ -1,0 +1,104 @@
+set of statements which are used to perfrom specific task
+
+function is defined by using "function" keyword
+
+function fn_name(args)
+{
+
+
+}
+
+function square(num)
+{
+return num * num;
+}
+
+console.log(square(3)); //9
+
+
+const mycar={
+manu: "Honda",
+model: "Accord",
+year:1998
+};
+
+function myFunc(obj)
+{
+obj.manu="Toyota";
+}
+
+
+console.log(mycar.manu); //Honda
+myFunc(mycar)
+console.log(mycar.manu); //Toyota
+
+obj----->mycar
+
+const arr= [45]
+function myFunc(arry)
+{
+arr[0]=40;
+}
+console.log(arr[0]); //45
+myFunc(arr)
+console.log(arr[0]); //40
+
+Function Expressions
+
+function can be created by using function expression ----------> anonymous
+
+const square = function(number)
+                         {
+                             return number *number
+};
+
+console.log(square(4));
+
+
+
+ (function(number)
+                         {
+                          console.log(number *number)
+})(4);
+
+
+function expressions are convenient when passing a function as an argument to another function
+
+
+
+
+function map(f,a)
+{
+const res=new Array(a.length);
+for(let i=0; i<a.length ; i++)
+{
+res[i]=f(a[i]);
+}
+return res;
+}
+
+const cube=function (x)
+{
+ return x*x*x;
+}
+
+const numbers = [0,1,2,5,10]
+console.log(map(cube,numbers))  // [0,1,8,125,1000]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
